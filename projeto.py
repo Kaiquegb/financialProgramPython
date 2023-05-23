@@ -28,25 +28,6 @@ for line in file_data.split("\n"):
         )
 
 
-# Função "save_data" criada para salvar a lista de transações num arquivo CSV.
-def save_data(transactions):
-    # Abrir o arquivo CSV no modo de escrita, apagando todos os dados que tinham antes.
-    file = open("transactions.csv", "w")
-
-    # Escrever/reconhecer os dados de cada item da lista no arquivo.
-    for item in transactions:
-        name = item["name"]
-        category = item["category"]
-        value = item["value"]
-        type = item["type"]
-        date = item["date"]
-        # Escrever os dados separados por ",".
-        file.write(f"{name},{category},{value},{type},{date}\n")
-
-    # Fechar o arquivo CSV.
-    file.close()
-
-
 # Função "add" criada para adicionar as transações no sistema. Serão pedidos os dados necessários para cada transação.
 def add(transactions):
     # Receber os dados necessários da transação a ser adicionada.
@@ -72,6 +53,25 @@ def add(transactions):
 
     print("Transação registrada com sucesso!")
     print("\n-------------------------\n")
+
+
+# Função "save_data" criada para salvar a lista de transações num arquivo CSV.
+def save_data(transactions):
+    # Abrir o arquivo CSV no modo de escrita, apagando todos os dados que tinham antes.
+    file = open("transactions.csv", "w")
+
+    # Escrever/reconhecer os dados de cada item da lista no arquivo.
+    for item in transactions:
+        name = item["name"]
+        category = item["category"]
+        value = item["value"]
+        type = item["type"]
+        date = item["date"]
+        # Escrever os dados separados por ",".
+        file.write(f"{name},{category},{value},{type},{date}\n")
+
+    # Fechar o arquivo CSV.
+    file.close()
 
 
 # Função "print_data" criada pra printar os dados de uma transação.
