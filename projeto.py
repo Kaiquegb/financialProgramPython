@@ -270,6 +270,7 @@ while True:
     # Checar qual foi a opção selecionada pelo usuário e chamar a função correspondente a cada uma delas. 
     if option == 1:
         add(transactions)
+        save_data(transactions)
     elif option == 2:
         list_transactions(transactions)
     elif option == 3:
@@ -282,8 +283,10 @@ while True:
         list_credits(transactions)
     elif option == 7:
         update(transactions)
+        save_data(transactions)
     elif option == 8:
         delete(transactions)
+        save_data(transactions)
     elif option == 0:
         print("Até a próxima!")
         # Salvar todas as movimentações realizadas, a fim de manter no arquivo e permitir que o usuário tenha acesso ao seu histórico de utilização.
