@@ -57,7 +57,7 @@ def add(transactions):
 
 # Função "save_data" criada para salvar a lista de transações num arquivo CSV.
 def save_data(transactions):
-    # Abrir o arquivo CSV no modo de escrita, apagando todos os dados que tinham antes.
+    # Abrir o arquivo CSV no modo de escrita, apagando todos os dados que tinham antes e reescrevendo com os dados atualizados (após cada movimentação no sistema).
     file = open("transactions.csv", "w")
 
     # Escrever/reconhecer os dados de cada item da lista no arquivo.
